@@ -1,0 +1,10 @@
+age_array = []
+data.each do  |k,v|
+  v.each do |item|
+    if item.has_key?("age")
+      age_array << item["age"]
+    end
+    end
+  end
+  age_array.map(&:to_i).inject(:+) / age_array.size.to_f.round
+end
